@@ -6,9 +6,13 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Test {
 	public static void main(String[] args) {
-		AbstractApplicationContext context=new ClassPathXmlApplicationContext("com/springcore/lifecycle/config.xml");
-		Pepsi p1=(Pepsi)context.getBean("p1");
-		context.registerShutdownHook();
+		ApplicationContext context=new ClassPathXmlApplicationContext("com/springcore/lifecycle/config.xml");
+		
+		PepsiInterface p1=(PepsiInterface)context.getBean("p1");
+		
 		System.out.println(p1);
+		System.out.println("++++++++++++++++++++++++");
+		ExampleAnnotation  ex =(ExampleAnnotation)context.getBean("ex");
+		System.out.println(ex);
 	}
 }

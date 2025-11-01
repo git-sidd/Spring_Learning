@@ -8,8 +8,14 @@
         https://www.springframework.org/schema/context
         https://www.springframework.org/schema/context/spring-context.xsd">
         
-        <bean class="com.springcore.lifecycle.Pepsi" name="p1">
+        
+        <bean class="com.springcore.lifecycle.PepsiInterface" name="p1">
         	<property name="price" value="20"/>
         </bean>
-        	
+        
+        <bean class="com.springcore.lifecycle.ExampleAnnotation" name="ex">
+        	<property name="subject" value="Devops"></property>
+        </bean>
+		
+		 <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>
 </beans>

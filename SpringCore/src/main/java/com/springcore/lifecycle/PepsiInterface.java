@@ -3,7 +3,7 @@ package com.springcore.lifecycle;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 
-public class Pepsi implements InitializingBean,DisposableBean {
+public class PepsiInterface implements InitializingBean,DisposableBean {
 	private double price;
 
 	public double getPrice() {
@@ -15,7 +15,7 @@ public class Pepsi implements InitializingBean,DisposableBean {
 		this.price = price;
 	}
 
-	public Pepsi() {
+	public PepsiInterface() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
