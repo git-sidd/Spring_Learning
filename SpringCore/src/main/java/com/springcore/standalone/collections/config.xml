@@ -11,6 +11,14 @@
         https://www.springframework.org/schema/util
         https://www.springframework.org/schema/util/spring-util.xsd">
         
-        <util:list
+        <!--<util:list list-class="java.util.LinkedList" id="frnd">
+        	<value>Aman</value>
+        	<value>Ram</value>
+        	<value>Shyam</value>
+        </util:list>-->
+        
+        <bean class="com.springcore.standalone.collections.Person" name="p1">
+        	<property name="frnd" ref="frnd"></property>
+        </bean>
         	
 </beans>
